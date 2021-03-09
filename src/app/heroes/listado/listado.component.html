@@ -1,0 +1,25 @@
+<p>listado de Héroes</p>
+
+<!--para condicionar si un elemento HTML puede aparecer o no-->
+<!--el "noBorrado" es una referencia local y son del lado del TEMPLATE (html)-->
+<div *ngIf = " heroeBorrado !== '' ; else noBorrado">
+    <h3>Héroe borrado:</h3>
+    <span> {{heroeBorrado}} </span>
+</div>
+
+<!--el "noBorrado" es una referencia local, y se localiza con un "#"-->
+<ng-template #noBorrado>
+    <h3>No ha borrado nada!!!</h3>
+</ng-template>
+
+<button (click) = "borrarHeroe()">
+    Borrar Héroe
+</button>
+
+<ul>
+    <!--para duplicar elementos en el html-->
+    <li *ngFor = "let heroe of heroes; let i = index">
+        {{i+1}} - {{heroe}}
+    </li>
+</ul>
+

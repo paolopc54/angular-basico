@@ -1,0 +1,28 @@
+<h1> {{nombre}} </h1>
+
+<dl>
+    <td> nombre: </td>
+    <dd> {{nombre}} </dd>
+
+    <td> edad: </td>
+    <dd> {{edad}} </dd>
+
+    <td> método: </td>
+    <dd> {{obtenerNombre()}} </dd>
+
+    <!--convertir a mayusculas-->
+    <td> capitalizado: </td>
+    <dd> {{nombre.toUpperCase()}} </dd>
+
+    <!--convertir a mayusculas pero con GET-->
+    <td> capitalizado con un GET: </td>
+    <dd> {{nombreCapitalizado}} </dd>
+</dl>
+
+<button (click)="cambiarNombre()">
+    Cambiar Heroe
+</button>
+
+<button (click)="cambiarEdad()">
+    Cambiar Edad
+</button>
